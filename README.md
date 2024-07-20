@@ -112,46 +112,7 @@ Ollama is used to generate responses based on the context and query provided. Th
     pipe.add_component("prompt_builder", PromptBuilder(template=template))  
     pipe.add_component("llm", OllamaGenerator(  
         model="llama3",  
-        url="http://localhost:11434/api/generate",  ---
-tags:
-  - mongodb
-  - python
-  - Haystack
-  - ollama
-  - how-to
----
-# MongoDB Web Crawl with Haystack and Ollama  
-  
-This project demonstrates how to set up a web crawl data processing pipeline using MongoDB, Haystack, and Ollama. The primary purpose is to fetch documents from a MongoDB replica set, process them, and retrieve information based on specific queries using the Haystack framework.  
-  
-## Requirements  
-  
-- Python 3.8+  
-- MongoDB  
-- Haystack  
-- Ollama  
-  
-## Project Structure  
-  
-- `main.py`: The main script that sets up and runs the data processing pipeline.  
-  
-## Setup Instructions  
-  
-1. **Clone the Repository**  
-        generation_kwargs={  
-            "num_predict": 100,  
-            "temperature": 0.9,  
-        }  
-    ))  
-    ```  
-  
-4. **Executing the Pipeline**  
-  
-    Runs the pipeline with a specific query:  
-    ```python  
-    query = "Given the context, give me a full list urls and their content with metaTags in meta that have name keyword"  
-    result = pipe.run({"prompt_builder": {"query": query},  
-                       "retriever": {"query": query}})  
+        url="http://localhost:11434/api/generate",
     ```  
   
 ## License  
